@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/qrcode"
+        android:title=""
+        android:icon="@drawable/qrcode"
+        />
+
+    <item
+        android:id="@+id/collection"
+        android:title=""
+        android:icon="@drawable/collection"
+        />
+    <item
+        android:id="@+id/home"
+        android:title=""
+        android:icon="@drawable/home"
+        />
+
+    <item
+        android:id="@+id/ticket"
+        android:title=""
+        android:icon="@drawable/ticket"
+        />
+    <item
+        android:id="@+id/profile"
+        android:title=""
+        android:icon="@drawable/account"
+
+        />
+
+
+
+
+</menu>
