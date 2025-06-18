@@ -1,41 +1,48 @@
 package com.example.mauto
-
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.Fragment
+import com.example.mauto.R
+import androidx.activity.enableEdgeToEdge
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
-
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        //recupero l id della navigation bar
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
-        val HomeFragment = HomeFragment()
-        val CollectionFragment = CollectionFragment()
 
-        //setto il fragment iniziale
-        setCurrentFragment(HomeFragment)
+        // Inizializzazione della BottomNavigationView
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> setCurrentFragment(HomeFragment)
-                R.id.collection -> setCurrentFragment(CollectionFragment)
+        // Impostiamo la Home come elemento selezionato di default
+        bottomNav.selectedItemId = R.id.nav_home
+
+        // Gestione del cambio di fragmente in base alla selezione (opzionale)
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    // Aggiungi codice per mostrare il Fragment della Home
+                    true
+                }
+                R.id.nav_qr -> {
+                    // Aggiungi codice per mostrare il Fragment QR
+                    true
+                }
+                R.id.nav_car -> {
+                    // Aggiungi codice per mostrare il Fragment Car
+                    true
+                }
+                R.id.nav_ticket -> {
+                    // Aggiungi codice per mostrare il Fragment Ticket
+                    true
+                }
+                R.id.nav_account -> {
+                    // Aggiungi codice per mostrare il Fragment Account
+                    true
+                }
+                else -> false
             }
-            true
-        }
-
-    }
-    //serve a settare com eprimo fragment in questo caso la home
-    private fun setCurrentFragment(fragment: Fragment) =
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, fragment)
-            commit()
         }
     }
+}

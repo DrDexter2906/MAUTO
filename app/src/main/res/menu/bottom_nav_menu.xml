@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_qr"
+        android:icon="@drawable/qrcode"
+        android:title="QR" />
+
+    <item
+        android:id="@+id/nav_car"
+        android:icon="@drawable/collection"
+        android:title="Car" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_ticket"
+        android:icon="@drawable/ticket"
+        android:title="Ticket" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/account"
+        android:title="Account" />
+
+</menu>
