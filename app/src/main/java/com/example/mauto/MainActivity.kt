@@ -3,6 +3,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mauto.R
 import androidx.activity.enableEdgeToEdge
+import androidx.fragment.app.Fragment
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> {
                     // Aggiungi codice per mostrare il Fragment della Home
+                    loadFragment(HomeFragment())
                     true
                 }
                 R.id.nav_qr -> {
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_car -> {
                     // Aggiungi codice per mostrare il Fragment Car
+                    loadFragment(CollectionFragment())
                     true
                 }
                 R.id.nav_ticket -> {
@@ -43,6 +46,14 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+
         }
+
+    }
+    private fun loadFragment(fragment: Fragment): Boolean {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment) //Id corrispondente a quello nel layout
+            .commit()
+        return true
     }
 }
