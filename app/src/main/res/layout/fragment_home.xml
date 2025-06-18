@@ -1,21 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Header fisso -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="656dp"
-        android:text="" />
-
-    <TextView
-        android:layout_width="80dp"
-        android:layout_marginLeft="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="home" />
+        android:layout_marginBottom="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="66dp">
 
-</FrameLayout>
+        <!-- Scritta "Home" + sottolineatura rossa -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="21dp">
+
+            <TextView
+                android:id="@+id/title_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+
+            <!-- Riga rossa sotto la scritta Home -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="#C70000" />
+        </LinearLayout>
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100sp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/mauto" />
+    </LinearLayout>
+
+
+    <!-- Contenuto scrollabile -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Immagine -->
+            <ImageView
+                android:id="@+id/car_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="30dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/image_rounded_background"
+                android:src="@drawable/carimage"
+                />
+
+            <!-- Titolo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mauto Torino"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="2dp"
+                android:background="#C70000"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Descrizione -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scopri la storia dell’automobile come non l’hai mai vista: esplora la collezione, prenota la tua visita, vivi mostre interattive e lasciati guidare tra icone del passato e innovazioni del futuro."
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Sezione Eventi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Scritta "Eventi" con sottolineatura -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eventi"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+
+                    <!-- Riga rossa sotto "Eventi" -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="#C70000" />
+                </LinearLayout>
+
+                <!-- Freccia → -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Clicca per scoprire tutti gli eventi disponibili al Museo Del Automobile"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
