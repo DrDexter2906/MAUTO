@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_qr -> {
                     // Aggiungi codice per mostrare il Fragment QR
+                    loadFragment(QRFragment())
                     true
                 }
                 R.id.nav_car -> {
@@ -38,10 +39,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_ticket -> {
                     // Aggiungi codice per mostrare il Fragment Ticket
+                    loadFragment(TicketFragment())
                     true
                 }
                 R.id.nav_account -> {
                     // Aggiungi codice per mostrare il Fragment Account
+                    loadFragment(AccountFragment())
                     true
                 }
                 else -> false
