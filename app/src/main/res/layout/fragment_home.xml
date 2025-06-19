@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@android:color/white"
     tools:context=".HomeFragment">
 
     <!-- Header fisso -->
     <LinearLayout
+        android:id="@+id/header_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
-        android:gravity="center_vertical"
+        android:layout_marginTop="66dp"
         android:orientation="horizontal"
-        android:layout_marginTop="66dp">
+        android:gravity="center_vertical">
 
         <!-- Scritta "Home" + sottolineatura rossa -->
         <LinearLayout
@@ -31,10 +30,8 @@
                 android:text="Home"
                 android:textColor="#000000"
                 android:textSize="28sp"
-                android:fontFamily="@font/poppinsbold"
-                />
+                android:fontFamily="@font/poppinsbold" />
 
-            <!-- Riga rossa sotto la scritta Home -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
@@ -51,22 +48,18 @@
             android:src="@drawable/mauto" />
     </LinearLayout>
 
-
-    <!-- Contenuto scrollabile -->
+    <!-- ScrollView sotto l'header -->
     <ScrollView
+        android:id="@+id/scroll_area"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp">
-
-            <!-- Immagine -->
-
-            <!-- Titolo -->
 
             <ImageView
                 android:id="@+id/car_image"
@@ -78,11 +71,9 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/carimage" />
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Mauto Torino"
                 android:textSize="24sp"
                 android:fontFamily="@font/poppinsbold"
@@ -95,7 +86,6 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Descrizione -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,7 +103,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
-                <!-- Scritta "Eventi" con sottolineatura -->
+                <!-- Scritta "Eventi" -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,24 +117,14 @@
                         android:fontFamily="@font/poppinsbold"
                         android:textColor="#000000" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Eventi"
-                            android:textSize="24sp"
-                            android:textStyle="bold"
-                            android:textColor="#000000" />
-
-                        <!-- Riga rossa sotto "Eventi" -->
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="#C70000" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="4dp"
+                        android:background="#C70000" />
                 </LinearLayout>
 
-                <!-- Freccia → -->
-                <!-- allinea con "eventi" -->
+                <!-- Freccia -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,7 +135,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -164,8 +143,8 @@
                 android:textSize="16sp"
                 android:textColor="#000000"
                 android:fontFamily="@font/poppinsmedium"
-                android:letterSpacing="0.05"/>
-
+                android:letterSpacing="0.05" />
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+</RelativeLayout>
