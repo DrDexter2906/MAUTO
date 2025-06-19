@@ -16,7 +16,12 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
-
+        //metto la prima schermata la home fragment
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment()) // Assicurati che R.id.fragment_container sia il tuo FrameLayout
+                .commit()
+        }
         // Inizializzazione della BottomNavigationView
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_nav)
 

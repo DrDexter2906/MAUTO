@@ -37,9 +37,9 @@
             <!-- Riga rossa sotto la scritta Home -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="4dp"
                 android:layout_marginTop="4dp"
-                android:background="#C70000" />
+                android:background="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <!-- Logo -->
@@ -65,17 +65,20 @@
             android:padding="24dp">
 
             <!-- Immagine -->
+
+            <!-- Titolo -->
+
             <ImageView
                 android:id="@+id/car_image"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginBottom="30dp"
-                android:scaleType="centerCrop"
                 android:background="@drawable/image_rounded_background"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/carimage"
-                />
+                android:clipToOutline="true" />
 
-            <!-- Titolo -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,9 +88,9 @@
                 android:textColor="#000000" />
 
             <View
-                android:layout_width="60dp"
-                android:layout_height="2dp"
-                android:background="#C70000"
+                android:layout_width="145dp"
+                android:layout_height="4dp"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp" />
 
@@ -124,7 +127,7 @@
                     <!-- Riga rossa sotto "Eventi" -->
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="2dp"
+                        android:layout_height="4dp"
                         android:layout_marginTop="4dp"
                         android:background="#C70000" />
                 </LinearLayout>
