@@ -31,7 +31,7 @@
                 android:text="Home"
                 android:textColor="#000000"
                 android:textSize="28sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/poppinsbold"
                 />
 
             <!-- Riga rossa sotto la scritta Home -->
@@ -71,15 +71,12 @@
             <ImageView
                 android:id="@+id/car_image"
                 android:layout_width="match_parent"
-                android:layout_height="199dp"
-                android:layout_marginBottom="29dp"
-                android:src="@drawable/carimage"
-
-                android:background="@drawable/image_rounded_background"
-
+                android:layout_height="200dp"
+                android:layout_marginBottom="30dp"
+                android:clipToOutline="true"
+                android:padding="4dp"
                 android:scaleType="centerCrop"
-
-                android:clipToOutline="true" />
+                android:src="@drawable/carimage" />
 
 
             <TextView
@@ -88,7 +85,7 @@
 
                 android:text="Mauto Torino"
                 android:textSize="24sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/poppinsbold"
                 android:textColor="#000000" />
 
             <View
@@ -100,12 +97,14 @@
 
             <!-- Descrizione -->
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:letterSpacing="0.05"
                 android:text="Scopri la storia dell’automobile come non l’hai mai vista: esplora la collezione, prenota la tua visita, vivi mostre interattive e lasciati guidare tra icone del passato e innovazioni del futuro."
-                android:textSize="16sp"
                 android:textColor="#000000"
-                android:layout_marginBottom="24dp" />
+                android:textSize="16sp" />
 
             <!-- Sezione Eventi -->
             <LinearLayout
@@ -120,6 +119,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eventi"
+                        android:textSize="24sp"
+                        android:fontFamily="@font/poppinsbold"
+                        android:textColor="#000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -143,10 +149,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppinsbold"
                     android:text="→"
                     android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
 
@@ -156,7 +162,9 @@
                 android:layout_marginTop="8dp"
                 android:text="Clicca per scoprire tutti gli eventi disponibili al Museo Del Automobile"
                 android:textSize="16sp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:fontFamily="@font/poppinsmedium"
+                android:letterSpacing="0.05"/>
 
         </LinearLayout>
     </ScrollView>
