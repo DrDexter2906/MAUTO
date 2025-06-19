@@ -1,20 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@android:color/white"
     tools:context=".HomeFragment">
 
     <!-- Header fisso -->
     <LinearLayout
-        android:id="@+id/header_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
-        android:layout_marginTop="66dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_marginTop="66dp">
 
         <!-- Scritta "Home" + sottolineatura rossa -->
         <LinearLayout
@@ -30,8 +31,10 @@
                 android:text="Home"
                 android:textColor="#000000"
                 android:textSize="28sp"
-                android:fontFamily="@font/poppinsbold" />
+                android:textStyle="bold"
+                />
 
+            <!-- Riga rossa sotto la scritta Home -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
@@ -48,12 +51,12 @@
             android:src="@drawable/mauto" />
     </LinearLayout>
 
-    <!-- ScrollView sotto l'header -->
+
+    <!-- Contenuto scrollabile -->
     <ScrollView
-        android:id="@+id/scroll_area"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/header_layout">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,22 +64,31 @@
             android:orientation="vertical"
             android:padding="24dp">
 
+            <!-- Immagine -->
+
+            <!-- Titolo -->
+
             <ImageView
                 android:id="@+id/car_image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="30dp"
-                android:clipToOutline="true"
-                android:padding="4dp"
+                android:layout_height="199dp"
+                android:layout_marginBottom="29dp"
+                android:src="@drawable/carimage"
+
+                android:background="@drawable/image_rounded_background"
+
                 android:scaleType="centerCrop"
-                android:src="@drawable/carimage" />
+
+                android:clipToOutline="true" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="Mauto Torino"
                 android:textSize="24sp"
-                android:fontFamily="@font/poppinsbold"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <View
@@ -86,15 +98,14 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp" />
 
+            <!-- Descrizione -->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:letterSpacing="0.05"
                 android:text="Scopri la storia dell’automobile come non l’hai mai vista: esplora la collezione, prenota la tua visita, vivi mostre interattive e lasciati guidare tra icone del passato e innovazioni del futuro."
+                android:textSize="16sp"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:layout_marginBottom="24dp" />
 
             <!-- Sezione Eventi -->
             <LinearLayout
@@ -103,37 +114,43 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
-                <!-- Scritta "Eventi" -->
+                <!-- Scritta "Eventi" con sottolineatura -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Eventi"
-                        android:textSize="24sp"
-                        android:fontFamily="@font/poppinsbold"
-                        android:textColor="#000000" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="#C70000" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eventi"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000" />
+
+                        <!-- Riga rossa sotto "Eventi" -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#C70000" />
                 </LinearLayout>
 
-                <!-- Freccia -->
+                <!-- Freccia → -->
+                <!-- allinea con "eventi" -->
                 <TextView
+
                     android:layout_width="wrap_content"
+
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:fontFamily="@font/poppinsbold"
                     android:text="→"
                     android:textColor="#000000"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -141,10 +158,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Clicca per scoprire tutti gli eventi disponibili al Museo Del Automobile"
                 android:textSize="16sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/poppinsmedium"
-                android:letterSpacing="0.05" />
+                android:textColor="#000000" />
+
         </LinearLayout>
     </ScrollView>
-
-</RelativeLayout>
+</LinearLayout>
