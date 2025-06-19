@@ -71,17 +71,21 @@
             <ImageView
                 android:id="@+id/car_image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/image_rounded_background"
-                android:padding="4dp"
-                android:scaleType="centerCrop"
+                android:layout_height="199dp"
+                android:layout_marginBottom="29dp"
                 android:src="@drawable/carimage"
+
+                android:background="@drawable/image_rounded_background"
+
+                android:scaleType="centerCrop"
+
                 android:clipToOutline="true" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="Mauto Torino"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -116,31 +120,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Eventi"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000" />
 
-                    <!-- Riga rossa sotto "Eventi" -->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="#C70000" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eventi"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000" />
+
+                        <!-- Riga rossa sotto "Eventi" -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#C70000" />
                 </LinearLayout>
 
                 <!-- Freccia → -->
+                <!-- allinea con "eventi" -->
                 <TextView
+
                     android:layout_width="wrap_content"
+
                     android:layout_height="wrap_content"
-                    android:text="→"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
                     android:layout_marginStart="8dp"
-                    android:textColor="#000000" />
+                    android:text="→"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
