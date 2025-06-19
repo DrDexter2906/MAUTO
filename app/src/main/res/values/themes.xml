@@ -1,12 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Mauto" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="Theme.Mauto" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colori, font, ecc. della tua app -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
     </style>
-
-    <style name="Theme.Mauto" parent="Base.Theme.Mauto" />
+    <style name="Theme.Mauto.Splash" parent="Theme.SplashScreen">
+        <!-- Background dello splash -->
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <!-- Icona al centro -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/prova</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <!-- Dopo lo splash, usa il tema dell'app -->
+        <item name="postSplashScreenTheme">@style/Theme.Mauto</item>
+    </style>
 </resources>
